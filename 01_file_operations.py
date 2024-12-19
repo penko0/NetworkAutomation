@@ -40,7 +40,7 @@ with open('config2.txt', 'w') as file2:
 # with open('config2.txt', 'a') as file2:
 #     file2.write("testdata12")
 
-#Create new file and add some text to it:
+#Create new file with name "new_file.txt" and add some text to it:
 with open('new_file.txt', 'w') as dest_file:
     dest_file.write('some text')
 
