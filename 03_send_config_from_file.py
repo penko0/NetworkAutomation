@@ -1,6 +1,6 @@
 import sys
 import time
-#import paramiko
+import paramiko
 from paramiko import client, ssh_exception
 import socket
 import datetime
@@ -8,28 +8,29 @@ import datetime
 
 username = 'admin'
 password = 'admin'
-csr_cmd = ['show run', 'show ip int brief']
+
+csr_cmd = ['show run']
+
+with open('csr_config.txt', 'r') as config:
+    new_commands = config.readlines()
+    print(new_commands)
 
 def cisco_cmd_executor(hostname, commands):
     try:
         print(f"Connecting to the device {hostname}..")
-        now = datetime.datetime.now().replace(microsecond=0)
-        current_conf_file = f"{now}_{hostname}.txt"
         ssh_client = client.SSHClient()
         ssh_client.set_missing_host_key_policy(client.AutoAddPolicy())
         ssh_client.connect(hostname=hostname, port=22, username=username, password=password, look_for_keys=False,
                            allow_agent=False)
 
         print(f"Connected to the device {hostname}")
-        device_access = ssh_client.invoke_shell()
+        device_access = ssh_client.invoke_shell() #Here we invoke the real shell and can see it in the configured output
         device_access.send("terminal len 0\n")
-        with open(current_conf_file, 'w') as cmd_data:
-            for cmd in commands:
-                device_access.send(f"{cmd}\n")
-                time.sleep(5)  #Due to latency of the router we have to increase the sleep time in order to receive the whole running config
-                output = device_access.recv(65535)
-                cmd_data.write(output.decode()) #Decodes byte data to UTF format
-                print(output.decode(), end='')
+        for cmd in commands:
+            device_access.send(f"{cmd}\n") #Here we send the commands to Cisco IOS interactive shell
+            time.sleep(2) 
+            output = device_access.recv(65535) #Here we define the output and its size in bytes
+            print(output.decode(), end='') #Here we print the output , actually the IOS interactive shell
 
     except ssh_exception.NoValidConnectionsError:
         print("SSH Port not reachable")
@@ -43,4 +44,4 @@ def cisco_cmd_executor(hostname, commands):
         print(sys.exc_info())
         # traceback.print_exception(*sys.exc_info())
 
-cisco_cmd_executor('192.168.1.23', csr_cmd)
+cisco_cmd_executor('192.168.1.172', new_commands)
