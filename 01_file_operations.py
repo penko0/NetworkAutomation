@@ -37,8 +37,8 @@ with open('config2.txt', 'w') as file2:
 
 #Append data without overwriting the file
 
-with open('config2.txt', 'a') as file2:
-    file2.write("testdata12")
+# with open('config2.txt', 'a') as file2:
+#     file2.write("testdata12")
 
 #Create new file and add some text to it:
 with open('new_file.txt', 'w') as dest_file:
