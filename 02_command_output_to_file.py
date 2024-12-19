@@ -1,6 +1,6 @@
 import sys
 import time
-import paramiko
+#import paramiko
 from paramiko import client, ssh_exception
 import socket
 import datetime
@@ -8,7 +8,7 @@ import datetime
 
 username = 'admin'
 password = 'admin'
-csr_cmd = ['show run']
+csr_cmd = ['show run', 'show ip int brief']
 
 def cisco_cmd_executor(hostname, commands):
     try:
@@ -26,9 +26,9 @@ def cisco_cmd_executor(hostname, commands):
         with open(current_conf_file, 'w') as cmd_data:
             for cmd in commands:
                 device_access.send(f"{cmd}\n")
-                time.sleep(10)  #Due to latency of the router we have to increase the sleep time in order to receive the whole running config
+                time.sleep(5)  #Due to latency of the router we have to increase the sleep time in order to receive the whole running config
                 output = device_access.recv(65535)
-                cmd_data.write(output.decode())
+                cmd_data.write(output.decode()) #Decodes byte data to UTF format
                 print(output.decode(), end='')
 
     except ssh_exception.NoValidConnectionsError:
@@ -43,4 +43,4 @@ def cisco_cmd_executor(hostname, commands):
         print(sys.exc_info())
         # traceback.print_exception(*sys.exc_info())
 
-cisco_cmd_executor('192.168.1.23', csr_cmd)
+cisco_cmd_executor('192.168.1.172', csr_cmd)
