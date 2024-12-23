@@ -146,6 +146,7 @@ memory free low-watermark processor 71489
 spanning-tree extend system-id
 !
 username admin privilege 15 secret 9 $9$SSJSkL5IkN4y.k$PqMh5Py1wIALTKEjtS9HYga0nl9hhtLwvGvv6qtnj1o
+username admin2 privilege 15 secret 9 $9$SSJSkL5IkN4y.k$PqMh5Py1wIALTKEjtS9HYga0nl9hhtLwvGvv6qtnj1o
 !
 redundancy
 !
@@ -182,7 +183,7 @@ interface GigabitEthernet1
  no mop sysid
 !
 interface GigabitEthernet2
- no ip address
+ ip address 1.1.1.1 255.255.255.0
  shutdown
  negotiation auto
  no mop enabled
@@ -202,9 +203,9 @@ ip http secure-server
 ip http client source-interface GigabitEthernet1
 !
 !
+ip route 0.0.0.0 0.0.0.0 192.168.1.1
 !
-!
-!
+netconf-yang
 !
 !
 !
