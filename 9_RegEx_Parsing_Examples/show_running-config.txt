@@ -204,7 +204,7 @@ ip http client source-interface GigabitEthernet1
 !
 !
 ip route 0.0.0.0 0.0.0.0 192.168.1.1
-!
+ip route 8.8.8.8 255.255.255.255 192.168.1.1
 netconf-yang
 !
 !
