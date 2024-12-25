@@ -34,7 +34,7 @@ def cisco_cmd_executor(hostname, commands, username, password):
                 print(output)
         ssh_client.close()
         print(int_pattern.search(output)) #This will print the first match 
-        int_iteration = int_pattern.finditer(output) # When we have more that one interfaces , wi must use finditer() along with "for" cycle
+        int_iteration = int_pattern.finditer(output) # When we have more that one interfaces , we must use finditer() along with "for" cycle to print the end result that is saved to list
         int_list = list()
         for intf in int_iteration:
             int_dict = dict()
