@@ -1,3 +1,7 @@
+import subprocess
+import threading
+from datetime import datetime
+
 start_time = datetime.now()
 def ping_test(host, value):
     try:
@@ -27,7 +31,6 @@ hosts = [{'host': '192.168.0.1', 'value': 2},
 
 # for host in hosts:
 #     ping_test(**host)
-
 # th1 = threading.Thread(target=ping_test, kwargs=hosts[0])
 # th2 = threading.Thread(target=ping_test, kwargs=hosts[1])
 # print(th1)
