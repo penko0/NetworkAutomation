@@ -47,7 +47,7 @@ dict1 = {'ip': '192.168.1.1',
          }
 
 # dict1['ip_new'] = '1.1.1.1'
-print(dir(dict1))
+# print(dir(dict1))
 print(dict1.get('ip'))
 
 dict1.setdefault("location", "IND")

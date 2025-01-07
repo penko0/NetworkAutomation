@@ -1,5 +1,8 @@
+''' The script has to be executed from command line with activated Python virtual environment for this script(genie_demo_env)'''
+
 from netmiko import ConnectHandler, exceptions
 from pprint import pprint
+
 lab_csr = {
     'device_type': 'cisco_ios',
     'host': '192.168.1.23',
