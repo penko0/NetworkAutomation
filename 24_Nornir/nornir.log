@@ -1,2 +1,7 @@
 2025-01-08 18:31:02,522 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts', 'interfaces']} on 3 hosts
 2025-01-08 18:32:19,820 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts', 'interfaces']} on 3 hosts
+2025-01-08 18:41:11,344 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts', 'interfaces']} on 3 hosts
+2025-01-08 18:42:04,822 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts', 'interfaces']} on 3 hosts
+2025-01-08 18:43:54,285 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts', 'interfaces']} on 3 hosts
+2025-01-08 18:46:30,632 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts', 'interfaces']} on 3 hosts
+2025-01-08 18:47:01,289 -  nornir.core -     INFO -        run() - Running task 'napalm_get' with args {'getters': ['facts', 'interfaces']} on 3 hosts
