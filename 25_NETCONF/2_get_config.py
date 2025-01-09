@@ -1,6 +1,6 @@
 from ncclient import manager
 
-lab_173 = {'host': '192.168.0.63',
+lab_173 = {'host': '192.168.1.23',
            'port': 830,
            'username': 'admin',
            'password': 'admin',
