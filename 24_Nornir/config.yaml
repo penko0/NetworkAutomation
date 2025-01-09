@@ -10,3 +10,6 @@ runner:
     plugin: threaded
     options:
         num_workers: 1
+logging:
+    log_file: nornir_new.log
+    level: DEBUG

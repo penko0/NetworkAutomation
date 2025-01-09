@@ -4,6 +4,8 @@ from nornir_napalm.plugins.tasks import napalm_get
 from datetime import datetime
 from pprint import pprint
 
+#Logging configuration is specified in config.yaml - the log file is nornir_new.log By default loggin is enabled
+
 nr = InitNornir(config_file="config.yaml") #Config file in YAML format
 start_time = datetime.now()
 # nr = InitNornir() #Here nornir looks for default config file hosts.yaml
