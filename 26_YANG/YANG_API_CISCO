@@ -1,0 +1,27 @@
+#How to add static routes via Yang Suite Cisco (192.168.1.153:8443)
+#We should use PATCH method in order to add static routes , PUT method deletes all static routes
+
+{
+    "Cisco-IOS-XE-native:route": {
+      "ip-route-interface-forwarding-list": [
+        {
+          "prefix": "5.5.5.5",
+          "mask": "255.255.255.255",
+          "fwd-list": [
+            {
+              "fwd": "192.168.1.1"
+            }
+          ]
+        },
+        {
+          "prefix": "0.0.0.0",
+          "mask": "0.0.0.0",
+          "fwd-list": [
+            {
+              "fwd": "192.168.1.1"
+            }
+          ]
+        }
+      ]
+    }
+  }
