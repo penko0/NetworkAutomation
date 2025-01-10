@@ -10,7 +10,7 @@ routers = {'host': '192.168.1.23',
 rtr_mgr = manager.connect(**routers)
 for rtr_capabilities in rtr_mgr.server_capabilities:
     print(rtr_capabilities)
-print(rtr_mgr.connected)
+print(rtr_mgr.connected) 
 rtr_mgr.close_session()
 print(rtr_mgr.connected)
 
