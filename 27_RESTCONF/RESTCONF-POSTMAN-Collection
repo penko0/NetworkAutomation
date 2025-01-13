@@ -1,0 +1,620 @@
+{
+	"info": {
+		"_postman_id": "cbf15fb3-63dd-44c2-80a9-2d941aadff74",
+		"name": "RESTCONF-Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33873553"
+	},
+	"item": [
+		{
+			"name": "01_get_host_meta",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://192.168.1.23/.well-known/host-meta",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"23"
+					],
+					"path": [
+						".well-known",
+						"host-meta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "02_get_restconf",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://192.168.1.23/restconf",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"23"
+					],
+					"path": [
+						"restconf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get_iface_info",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://192.168.1.23/restconf/data/Cisco-IOS-XE-native:native/interface/GigabitEthernet=1",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"23"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"Cisco-IOS-XE-native:native",
+						"interface",
+						"GigabitEthernet=1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "03_Get_module_info",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://192.168.1.23/restconf/data/ietf-yang-library:modules-state",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"23"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"ietf-yang-library:modules-state"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "04_get_all_ifaces",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://192.168.1.23:443/restconf/data/Cisco-IOS-XE-native:native/interface/GigabitEthernet",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"23"
+					],
+					"port": "443",
+					"path": [
+						"restconf",
+						"data",
+						"Cisco-IOS-XE-native:native",
+						"interface",
+						"GigabitEthernet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "05_get_single_iface",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://192.168.1.23:443/restconf/data/Cisco-IOS-XE-native:native/interface/GigabitEthernet=1",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"23"
+					],
+					"port": "443",
+					"path": [
+						"restconf",
+						"data",
+						"Cisco-IOS-XE-native:native",
+						"interface",
+						"GigabitEthernet=1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "09_DELETE_iface",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://192.168.1.25:443/restconf/data/Cisco-IOS-XE-native:native/interface/Loopback=2",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"25"
+					],
+					"port": "443",
+					"path": [
+						"restconf",
+						"data",
+						"Cisco-IOS-XE-native:native",
+						"interface",
+						"Loopback=2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "06_PUT_Hostname",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"hostname\": \"CSR2-2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://192.168.1.25:443/restconf/data/Cisco-IOS-XE-native:native/hostname",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"25"
+					],
+					"port": "443",
+					"path": [
+						"restconf",
+						"data",
+						"Cisco-IOS-XE-native:native",
+						"hostname"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "10_Save_config",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://192.168.1.25/restconf/operations/cisco-ia:save-config/",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"25"
+					],
+					"path": [
+						"restconf",
+						"operations",
+						"cisco-ia:save-config",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "07_POST_domain_name",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"lab1.local\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://192.168.1.25/restconf/data/Cisco-IOS-XE-native:native/ip/domain",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"25"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"Cisco-IOS-XE-native:native",
+						"ip",
+						"domain"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "08_PATCH_static_route",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/yang-data+json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/yang-data+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Cisco-IOS-XE-native:route\": {\r\n        \"ip-route-interface-forwarding-list\": [\r\n            {\r\n                \"prefix\": \"1.1.3.22\",\r\n                \"mask\": \"255.255.255.255\",\r\n                \"fwd-list\": [\r\n                    {\r\n                        \"fwd\": \"192.168.1.2\"\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://192.168.1.25/restconf/data/Cisco-IOS-XE-native:native/ip/route",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"25"
+					],
+					"path": [
+						"restconf",
+						"data",
+						"Cisco-IOS-XE-native:native",
+						"ip",
+						"route"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "admin",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "admin",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"value": "",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}
