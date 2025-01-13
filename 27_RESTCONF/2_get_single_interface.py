@@ -4,7 +4,7 @@ import requests
 from urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
-url = "https://192.168.0.63:443/restconf/data/Cisco-IOS-XE-native:native/interface/GigabitEthernet=1"
+url = "https://192.168.1.23:443/restconf/data/Cisco-IOS-XE-native:native/interface/GigabitEthernet=1"
 
 
 headers = {
