@@ -1,0 +1,162 @@
+{
+  "ins_api": {
+    "type": "cli_show",
+    "version": "1.0",
+    "sid": "eoc",
+    "outputs": {
+      "output": {
+        "input": "show hardware",
+        "msg": "Success",
+        "code": "200",
+        "body": {
+          "header_str": "Cisco Nexus Operating System (NX-OS) Software\nTAC support: http://www.cisco.com/tac\nDocuments: http://www.cisco.com/en/US/products/ps9372/tsd_products_support_series_home.html\nCopyright (c) 2002-2022, Cisco Systems, Inc. All rights reserved.\nThe copyrights to certain works contained herein are owned by\nother third parties and are used and distributed under license.\nSome parts of this software are covered under the GNU Public\nLicense. A copy of the license is available at\nhttp://www.gnu.org/licenses/gpl.html.\n\nNexus 9000v is a demo version of the Nexus Operating System\n",
+          "bios_ver_str": "",
+          "kickstart_ver_str": "9.3(10)",
+          "nxos_ver_str": "9.3(10)",
+          "bios_cmpl_time": "",
+          "kick_file_name": "bootflash:///nxos.9.3.10.bin",
+          "nxos_file_name": "bootflash:///nxos.9.3.10.bin",
+          "kick_cmpl_time": "7/8/2022 9:00:00",
+          "nxos_cmpl_time": "7/8/2022 9:00:00",
+          "kick_tmstmp": "07/08/2022 18:10:17",
+          "nxos_tmstmp": "07/08/2022 18:10:17",
+          "chassis_id": "Nexus9000 C9300v Chassis",
+          "cpu_name": "Intel(R) Xeon(R) CPU E5-2609 v2 @ 2.50GHz",
+          "memory": "8159464",
+          "mem_type": "kB",
+          "proc_board_id": "9NZMS2YNVXB",
+          "host_name": "NXOS",
+          "bootflash_size": "4287040",
+          "kern_uptm_days": "0",
+          "kern_uptm_hrs": "3",
+          "kern_uptm_mins": "36",
+          "kern_uptm_secs": "51",
+          "rr_reason": "Unknown",
+          "rr_sys_ver": "",
+          "rr_service": "",
+          "plugins": "Core Plugin, Ethernet Plugin",
+          "manufacturer": "Cisco Systems, Inc.",
+          "TABLE_slot": {
+            "ROW_slot": {
+              "TABLE_slot_info": {
+                "ROW_slot_info": [
+                  {
+                    "type": "Nexus9000 C9300v Chassis",
+                    "model_num": "N9K-C9300v",
+                    "hw_ver": "0.0",
+                    "part_num": "",
+                    "part_revision": "",
+                    "manuf_date": "Year 1996 Week 0",
+                    "serial_num": "9XXZCP83PJN",
+                    "CLEI_code": "",
+                    "num_slot_str": "2 Supervisor slots, 16 Linecard slots, 6 Fabric slots, 2 System Controller slots\n"
+                  },
+                  {
+                    "status_ok_empty": "Module1  ok",
+                    "type": "\"Nexus 9000v 64 port Ethernet Module\"",
+                    "num_submods": "0",
+                    "model_num": "N9K-X9364v",
+                    "hw_ver": "0.0",
+                    "part_num": "73-99064-01",
+                    "part_revision": "",
+                    "manuf_date": "Year 1996 Week 0",
+                    "serial_num": "9I2YX5G0IFB",
+                    "CLEI_code": ""
+                  },
+                  {
+                    "status_ok_empty": "Module2  empty"
+                  },
+                  {
+                    "status_ok_empty": "Module3  empty"
+                  },
+                  {
+                    "status_ok_empty": "Module4  empty"
+                  },
+                  {
+                    "status_ok_empty": "Module5  empty"
+                  },
+                  {
+                    "status_ok_empty": "Module6  empty"
+                  },
+                  {
+                    "status_ok_empty": "Module7  empty"
+                  },
+                  {
+                    "status_ok_empty": "Module8  empty"
+                  },
+                  {
+                    "status_ok_empty": "Module9  empty"
+                  },
+                  {
+                    "status_ok_empty": "Module10  empty"
+                  },
+                  {
+                    "status_ok_empty": "Module11  empty"
+                  },
+                  {
+                    "status_ok_empty": "Module12  empty"
+                  },
+                  {
+                    "status_ok_empty": "Module13  empty"
+                  },
+                  {
+                    "status_ok_empty": "Module14  empty"
+                  },
+                  {
+                    "status_ok_empty": "Module15  empty"
+                  },
+                  {
+                    "status_ok_empty": "Module16  empty"
+                  },
+                  {
+                    "status_ok_empty": "FM21  empty"
+                  },
+                  {
+                    "status_ok_empty": "FM22  empty"
+                  },
+                  {
+                    "status_ok_empty": "FM23  empty"
+                  },
+                  {
+                    "status_ok_empty": "FM24  empty"
+                  },
+                  {
+                    "status_ok_empty": "FM25  empty"
+                  },
+                  {
+                    "status_ok_empty": "FM26  empty"
+                  },
+                  {
+                    "status_ok_empty": "Module27  ok",
+                    "type": "\"Supervisor Module\"",
+                    "num_submods": "0",
+                    "model_num": "N9K-vSUP",
+                    "hw_ver": "0.0",
+                    "part_num": "73-15279-01",
+                    "part_revision": "",
+                    "manuf_date": "Year 1996 Week 0",
+                    "serial_num": "9NZMS2YNVXB",
+                    "CLEI_code": ""
+                  },
+                  {
+                    "status_ok_empty": "Module28  empty"
+                  },
+                  {
+                    "status_ok_empty": "Module29  empty"
+                  },
+                  {
+                    "status_ok_empty": "Module30  empty",
+                    "num_slot_str": [
+                      "0 PowerSupply Slots",
+                      "0 Fan slots"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

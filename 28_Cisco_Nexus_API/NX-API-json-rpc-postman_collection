@@ -1,0 +1,234 @@
+{
+	"info": {
+		"_postman_id": "3d2b8132-0ac7-4019-8d85-e6c8af131d00",
+		"name": "NX-API-json-rpc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33873553"
+	},
+	"item": [
+		{
+			"name": "NXAPI-show_hardware-json-rpc",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json-rpc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"jsonrpc\": \"2.0\",\r\n    \"method\": \"cli\",\r\n    \"params\": {\r\n      \"cmd\": \"show hardware\",\r\n      \"version\": 1\r\n    },\r\n    \"id\": 1\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://192.168.1.174/ins",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"174"
+					],
+					"path": [
+						"ins"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NXAPI-config_interface-json-rpc",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json-rpc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n    \"jsonrpc\": \"2.0\",\r\n    \"method\": \"cli\",\r\n    \"params\": {\r\n      \"cmd\": \"show hardware\",\r\n      \"version\": 1\r\n    },\r\n    \"id\": 1\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://192.168.1.174/ins",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"174"
+					],
+					"path": [
+						"ins"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NXAPI-config_interface-json",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ins_api\": {\r\n    \"version\": \"1.0\",\r\n    \"type\": \"cli_conf\",\r\n    \"chunk\": \"0\",\r\n    \"sid\": \"sid\",\r\n    \"input\": \"interface e1/2 ; description from_json ; aaa ; no switchport ; ip add 1.1.1.2 255.255.255.0\",\r\n    \"output_format\": \"json\",\r\n    \"rollback\": \"continue-on-error\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://192.168.1.174/ins",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"174"
+					],
+					"path": [
+						"ins"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NXAPI-JSON-Bash",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{username}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ins_api\": {\r\n    \"version\": \"1.0\",\r\n    \"type\": \"bash\",\r\n    \"chunk\": \"0\",\r\n    \"sid\": \"sid\",\r\n    \"input\": \"cat /etc/os-release\",\r\n    \"output_format\": \"json\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://192.168.1.174/ins",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"174"
+					],
+					"path": [
+						"ins"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
