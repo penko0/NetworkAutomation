@@ -21,7 +21,7 @@ print(show_ip_int_br_parsed, "\n")
 
 ''' Prints given interface from the dictionary that we created earlier'''
 # print(show_ip_int_br_parsed['interface']['GigabitEthernet2'])
-# print(show_version_parsed['version']['version_short'])
+print(show_version_parsed['version']['chassis'])
 
 # pprint(dir(dev.api)) # Print all the methods that we can use
 
