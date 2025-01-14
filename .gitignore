@@ -1,0 +1,25 @@
+# Python compiled files
+*.pyc
+*.pyo
+__pycache__/
+
+# Cython files
+*.c
+*.so
+
+# Developer files
+.project
+.pydevproject
+.vscode/
+
+# Swap files (VI)
+*.sw*
+
+# backup files
+*.bak
+
+# rope project files
+*.ropeproject
+# temp files
+*~
+*venv/
