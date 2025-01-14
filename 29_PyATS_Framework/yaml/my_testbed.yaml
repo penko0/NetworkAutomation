@@ -1,0 +1,34 @@
+devices:
+  CSR2:
+    connections:
+      cli:
+        ip: 192.168.1.25
+        protocol: ssh
+    credentials:
+      default:
+        password: '%ENC{w5HDncOOw53DoQ==}'
+        username: admin
+    os: iosxe
+    type: iosxe
+  CSR3:
+    connections:
+      cli:
+        ip: 192.168.1.23
+        protocol: ssh
+    credentials:
+      default:
+        password: '%ENC{w5HDncOOw53DoQ==}'
+        username: admin
+    os: iosxe
+    type: iosxe
+  vIOS:
+    connections:
+      cli:
+        ip: 192.168.1.172
+        protocol: ssh
+    credentials:
+      default:
+        password: '%ENC{w5HDncOOw53DoQ==}'
+        username: admin
+    os: ios
+    platform: iosv
