@@ -1,0 +1,16 @@
+--- learn_files/previous_state/static_routing_iosxe_CSR3_ops.txt
++++ learn_files/current_state/static_routing_iosxe_CSR3_ops.txt
+ info:
+  vrf:
+   default:
+    address_family:
+     ipv4:
+      routes:
+-      1.1.1.111/32:
+-       next_hop:
+-        outgoing_interface:
+-         GigabitEthernet1:
+-          active: True
+-          outgoing_interface: GigabitEthernet1
+-          preference: 1
+-       route: 1.1.1.111/32

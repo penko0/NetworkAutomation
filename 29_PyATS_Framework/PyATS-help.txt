@@ -1,0 +1,24 @@
+#First we need to create a "testbed" file that contains list of our devices in YAML format. 
+#To create interactive YAML file:
+ 
+pyats create testbed interactive --output yaml/my_testbed.yaml --encode-password
+
+#How to parse "show version"(or other command) and print it in dictionary format
+pyats parse "show version" --testbed-file yaml/my_testbed.yaml --device CSR2 CSR3
+pyats parse "show ip interface brief" --testbed-file yaml/my_testbed.yaml --device CSR3 --output parsed_files/current_state 
+
+#PyATS Learn feature with tested on "MOCK" device(not real device)
+pyats learn ospf --testbed-file mock.yaml --device uut --output learn_files/output_folder
+
+#With real device on my lab
+pyats learn interface --testbed-file yaml/my_testbed.yaml --devices CSR3 --output learn_files/csr3_interface
+pyats learn static_routing --testbed-file yaml/my_testbed.yaml --devices CSR3 --output learn_files/csr3_static_route
+
+#ALL FEATURES LEARNING - for more info  visit the official page of PyATS project
+pyats learn all --testbed-file yaml/my_testbed.yaml --devices CSR3 --output learn_files/csr3_all_features
+
+#Compare differences between 2 states. First we have to use "learn" feature.
+pyats learn static_routing --testbed-file yaml/my_testbed.yaml --device CSR3 --output learn_files/previous_state
+pyats learn static_routing --testbed-file yaml/my_testbed.yaml --device CSR3 --output learn_files/current_state
+
+pyats diff learn_files/previous_state/ learn_files/current_state/
